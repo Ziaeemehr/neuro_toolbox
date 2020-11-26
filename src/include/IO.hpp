@@ -11,6 +11,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
 #include <sys/stat.h>
 #include <assert.h>
 #include <stdlib.h> /* exit, EXIT_FAILURE */
@@ -114,6 +115,101 @@ namespace Neuro
         }
     }
 
+    //-------------------------------------------------------------------------
+    template <typename T>
+    std::vector<std::vector<T>> adjmat_to_adjlist(
+        const std::vector<std::vector<T>> &A,
+        const double threshold = 1e-8,
+        std::string in_degree = "row")
+    {
+        /*!
+        return adjacency list of given adjacency matrix
+        * \param A  input adjacency matrix
+        * \param threshold  threshold for binarizing 
+        * \param in_degree  "row" or "col" to consider input edges on row or col, respectively
+        * \return adjacency list as a vector of vector
+        * 
+        * 
+        * **example**
+        * adjmat_to_adjlist<int>(A);
+        */
+        int row = A.size();
+        int col = A[0].size();
+        std::vector<std::vector<int>> adjlist;
+
+        if (in_degree == "row")
+        {
+            adjlist.resize(row);
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    if (std::abs(A[i][j]) > 1.e-8)
+                        adjlist[i].push_back(j);
+                }
+            }
+        }
+        else
+        {
+            adjlist.resize(col);
+
+            for (int i = 0; i < col; i++)
+            {
+                for (int j = 0; j < row; j++)
+                {
+                    if (std::abs(A[i][j]) > 1.e-8)
+                        adjlist[i].push_back(j);
+                }
+            }
+        }
+
+        return adjlist;
+    }
+
+    //-------------------------------------------------------------------------
+    template <typename T>
+    void write_matrix_to_file(const std::vector<std::vector<T>> &A,
+                              const std::string file_name)
+    {
+        int row = A.size();
+        int col = A[0].size();
+
+        std::ofstream ofile;
+        ofile.open(file_name);
+        if (ofile.is_open())
+        {
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    ofile << A[i][j] << " ";
+                }
+                ofile << "\n";
+            }
+            ofile.close();
+        }
+        else
+            std::cout << "Error opening file to write data. \n";
+    }
+
+    //-------------------------------------------------------------------------
+    template <typename T>
+    void write_vector_to_file(const std::vector<T> &v,
+                              const std::string file_name)
+    {
+        size_t n = v.size();
+        std::ofstream ofile;
+        ofile.open(file_name);
+        if (ofile.is_open())
+        {
+            for (size_t i = 0; i < n; ++i)
+                ofile << v[i] << "\n";
+            ofile.close();
+        }
+        else
+            std::cout << "Error opening file to write data. \n";
+    }
     //-------------------------------------------------------------------------
 
 } // namespace Neuro

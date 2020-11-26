@@ -2,6 +2,7 @@
 #include "neuro_toolbox.hpp"
 #include "catch.hpp"
 #include <vector>
+// #include <string>
 
 TEST_CASE("Read single column file", " ")
 {
@@ -19,6 +20,25 @@ TEST_CASE("Read matrix", " ")
     REQUIRE(A[1][0] == -4);
 }
 
+TEST_CASE("write matrix to text file", " ")
+{
+    std::vector<std::vector<int>> A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+    Neuro::write_matrix_to_file<int>(A, "data/write_matrix_to_file.txt");
+    std::vector<std::vector<int>> B = Neuro::read_matrix<int>(
+        "data/write_matrix_to_file.txt",
+        4,
+        3);
+    REQUIRE(A[0][0] == B[0][0]);
+    REQUIRE(A[3][2] == B[3][2]);
+}
+
+TEST_CASE("write vector to file", " ")
+{
+    std::vector<int> A{5, 8, 9};
+    Neuro::write_vector_to_file<int>(A, "data/write_vector_to_file.txt");
+    auto B = Neuro::read_vector<int>("data/write_vector_to_file.txt");
+    REQUIRE(A[1] == B[1]);
+}
 
 // Compile & run:
 // - g++ -std=c++11 -Wall -I$(CATCH_SINGLE_INCLUDE) -o prog prog.cpp && ./prog --success
