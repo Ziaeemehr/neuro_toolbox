@@ -1,0 +1,4 @@
+
+make
+./IO_test.exe
+./timing_test.exe

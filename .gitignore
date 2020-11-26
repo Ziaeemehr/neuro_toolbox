@@ -1,0 +1,6 @@
+*.txt
+*.o
+*.exe
+
+html/
+build/
