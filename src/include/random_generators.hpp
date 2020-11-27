@@ -8,46 +8,46 @@
 namespace NTB
 {
     
-    std::vector<float> rand_uniform(const double low,
-                                    const double high,
-                                    const int size,
-                                    const int seed = -1)
-    {
-        /*! 
-        * Random number distribution that produces floating-point values according to a uniform distribution, which is described by the following probability density function:
-        * P(X|a, b) = 1/(b-a), a<= x < b
-        * This distribution (also know as rectangular distribution) produces random numbers in a range [a,b) where all intervals of the same length within it are equally probable.
-        * \param low Lower boundary of the output interval. All values generated will be greater than or equal to low.
-        * \param high Upper boundary of the output interval. All values generated will be less than or equal to high.
-        * \param size Lengh of output random numbers.
-        * \param seed if not defined a positive number, return the same random numbers
-        * 
-        */
+    // std::vector<float> rand_uniform(const double low,
+    //                                 const double high,
+    //                                 const int size,
+    //                                 const int seed = -1)
+    // {
+    //     /*! 
+    //     * Random number distribution that produces floating-point values according to a uniform distribution, which is described by the following probability density function:
+    //     * P(X|a, b) = 1/(b-a), a<= x < b
+    //     * This distribution (also know as rectangular distribution) produces random numbers in a range [a,b) where all intervals of the same length within it are equally probable.
+    //     * \param low Lower boundary of the output interval. All values generated will be greater than or equal to low.
+    //     * \param high Upper boundary of the output interval. All values generated will be less than or equal to high.
+    //     * \param size Lengh of output random numbers.
+    //     * \param seed if not defined a positive number, return the same random numbers
+    //     * 
+    //     */
 
-        assert(low < high);
-        assert(size > 0);
+    //     assert(low < high);
+    //     assert(size > 0);
 
-        std::vector<float> numbers(size);
+    //     std::vector<float> numbers(size);
 
-        if (seed >= 0)
-        {
-            std::default_random_engine generator(seed);
-            std::uniform_real_distribution<float> uniform(low, high);
-            for (size_t i = 0; i < size; ++i)
-                numbers[i] = uniform(generator);
-        }
-        else
-        {
-            std::random_device rd;  //Will be used to obtain a seed for the random number engine
-            std::mt19937 generator(rd()); //Standard mersenne_twister_engine seeded with rd()
-            std::uniform_real_distribution<float> uniform(low, high);
+    //     if (seed >= 0)
+    //     {
+    //         std::default_random_engine generator(seed);
+    //         std::uniform_real_distribution<float> uniform(low, high);
+    //         for (size_t i = 0; i < size; ++i)
+    //             numbers[i] = uniform(generator);
+    //     }
+    //     else
+    //     {
+    //         std::random_device rd;  //Will be used to obtain a seed for the random number engine
+    //         std::mt19937 generator(rd()); //Standard mersenne_twister_engine seeded with rd()
+    //         std::uniform_real_distribution<float> uniform(low, high);
 
-            for (size_t i=0; i<size; ++i)
-                numbers[i] = uniform(generator);
-        }
+    //         for (size_t i=0; i<size; ++i)
+    //             numbers[i] = uniform(generator);
+    //     }
 
-        return numbers;
-    }
+    //     return numbers;
+    // }
 
     //-------------------------------------------------------------------------
     std::vector<int> randint(const int low,
@@ -73,7 +73,7 @@ namespace NTB
         {
             std::default_random_engine generator(seed);
             std::uniform_int_distribution<int> uniform(low, high);
-            for (size_t i = 0; i < size; ++i)
+            for (int i = 0; i < size; ++i)
                 numbers[i] = uniform(generator);
         }
         else
@@ -82,7 +82,7 @@ namespace NTB
             std::mt19937 generator(rd()); //Standard mersenne_twister_engine seeded with rd()
             std::uniform_int_distribution<int> uniform(low, high);
 
-            for (size_t i=0; i<size; ++i)
+            for (int i=0; i<size; ++i)
                 numbers[i] = uniform(generator);
         }
 

@@ -1,4 +1,5 @@
 
 make
 ./IO_test.exe
-./timing_test.exe
+./utility_test.exe
+./random_generators_test.exe

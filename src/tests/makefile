@@ -1,17 +1,18 @@
 
 
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -I../include/
+DIR = ../include
+CXXFLAGS = -std=c++11 -Wall -I$(DIR)
 
-all: IO_test.exe timing_test.exe
+# HEADERS = 
 
-IO_test.exe: IO_test.o 
+all:  random_generators_test.exe IO_test.exe utility_test.exe
+
+
+%.exe: %.o
 	$(CXX)  -o $@  $^ $(CXXFLAGS)
 
-timing_test.exe : timing_test.o
-	$(CXX)  -o $@  $^ $(CXXFLAGS)
-
-%.o : %.cpp neuro_toolbox.hpp 
+%_test.o : %_test.cpp $(DIR)/%.hpp
 	$(CXX) -c $<  $(CXXFLAGS)
 
 clean:
@@ -19,3 +20,13 @@ clean:
 
 .phoney: clean all
 
+
+
+# random_generators_test.exe: random_generators_test.o
+# 	$(CXX)  -o $@  $^ $(CXXFLAGS)
+
+# IO_test.exe: IO_test.o 
+# 	$(CXX)  -o $@  $^ $(CXXFLAGS)
+
+# timing_test.exe : timing_test.o
+# 	$(CXX)  -o $@  $^ $(CXXFLAGS)
