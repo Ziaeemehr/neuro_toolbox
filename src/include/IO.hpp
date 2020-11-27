@@ -53,7 +53,7 @@ namespace NTB
         return numbers;
     }
     //-------------------------------------------------------------------------
-    inline bool fileExists(const std::string &filename)
+    inline bool file_exists(const std::string &filename)
     {
         /*!
         check whether file with given name exist
@@ -94,7 +94,7 @@ namespace NTB
         std::ifstream ifile(filename);
 
         /*to check if input file exists*/
-        if (fileExists(filename))
+        if (file_exists(filename))
         {
             std::vector<std::vector<T>> Cij(row, std::vector<T>(col));
 
@@ -170,13 +170,20 @@ namespace NTB
     //-------------------------------------------------------------------------
     template <typename T>
     void write_matrix_to_file(const std::vector<std::vector<T>> &A,
-                              const std::string file_name)
+                              const std::string filename)
     {
+        /*! 
+        * Write matrix to text file
+        
+        * \param A input vector of vector of type T.
+        * \param filename output text file name.
+        * 
+        */
         int row = A.size();
         int col = A[0].size();
 
         std::ofstream ofile;
-        ofile.open(file_name);
+        ofile.open(filename);
         if (ofile.is_open())
         {
             for (int i = 0; i < row; i++)
@@ -196,11 +203,20 @@ namespace NTB
     //-------------------------------------------------------------------------
     template <typename T>
     void write_vector_to_file(const std::vector<T> &v,
-                              const std::string file_name)
+                              const std::string filename)
     {
+        /*!
+        * Write vector to text file
+        * 
+        * \param v input vector of type T
+        * \param filename output text file name.
+        * 
+        * Exit if it could not open file to write successfully. 
+
+        */
         size_t n = v.size();
         std::ofstream ofile;
-        ofile.open(file_name);
+        ofile.open(filename);
         if (ofile.is_open())
         {
             for (size_t i = 0; i < n; ++i)
@@ -208,7 +224,10 @@ namespace NTB
             ofile.close();
         }
         else
+        {
             std::cout << "Error opening file to write data. \n";
+            exit(EXIT_FAILURE);
+        }
     }
     //-------------------------------------------------------------------------
 
