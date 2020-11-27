@@ -20,7 +20,7 @@ namespace NTB
 {
 
     template <typename T>
-    inline std::vector<T> read_vector(std::string filename)
+    inline std::vector<T> load_vector(std::string filename)
     {
         /*!
         * Read numbers from single column text file
@@ -72,7 +72,7 @@ namespace NTB
 
     //-------------------------------------------------------------------------
     template <typename T>
-    inline std::vector<std::vector<T>> read_matrix(
+    inline std::vector<std::vector<T>> load_matrix(
         const std::string filename,
         const int row,
         const int col)
