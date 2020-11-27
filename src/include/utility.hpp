@@ -5,7 +5,7 @@
 #include <sys/time.h>
 #include <string>
 
-namespace Neuro
+namespace NTB
 {
     /*------------------------------------------------------------*/
     double get_wall_time()

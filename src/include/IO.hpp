@@ -16,7 +16,7 @@
 #include <assert.h>
 #include <stdlib.h> /* exit, EXIT_FAILURE */
 
-namespace Neuro
+namespace NTB
 {
 
     template <typename T>

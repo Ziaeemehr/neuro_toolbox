@@ -6,13 +6,13 @@
 
 TEST_CASE("Read single column file", " ")
 {
-    std::vector<int> vec = Neuro::read_vector<int>("data/single_column_integer.txt");
+    std::vector<int> vec = NTB::read_vector<int>("data/single_column_integer.txt");
     REQUIRE(vec[1] == 8);
 }
 
 TEST_CASE("Read matrix", " ")
 {
-    std::vector<std::vector<int>> A = Neuro::read_matrix<int>(
+    std::vector<std::vector<int>> A = NTB::read_matrix<int>(
         "data/matrix_integer.txt",
         4,
         3);
@@ -23,8 +23,8 @@ TEST_CASE("Read matrix", " ")
 TEST_CASE("write matrix to text file", " ")
 {
     std::vector<std::vector<int>> A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
-    Neuro::write_matrix_to_file<int>(A, "data/write_matrix_to_file.txt");
-    std::vector<std::vector<int>> B = Neuro::read_matrix<int>(
+    NTB::write_matrix_to_file<int>(A, "data/write_matrix_to_file.txt");
+    std::vector<std::vector<int>> B = NTB::read_matrix<int>(
         "data/write_matrix_to_file.txt",
         4,
         3);
@@ -35,8 +35,8 @@ TEST_CASE("write matrix to text file", " ")
 TEST_CASE("write vector to file", " ")
 {
     std::vector<int> A{5, 8, 9};
-    Neuro::write_vector_to_file<int>(A, "data/write_vector_to_file.txt");
-    auto B = Neuro::read_vector<int>("data/write_vector_to_file.txt");
+    NTB::write_vector_to_file<int>(A, "data/write_vector_to_file.txt");
+    auto B = NTB::read_vector<int>("data/write_vector_to_file.txt");
     REQUIRE(A[1] == B[1]);
 }
 
