@@ -63,7 +63,6 @@ namespace NTB
         * \param size Lengh of output random numbers.
         * \param seed if not defined a positive number, return the same random numbers
         * 
-        * 
         */
         assert(low < high);
         assert(size > 0);
