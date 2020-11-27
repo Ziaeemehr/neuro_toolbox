@@ -1,7 +1,7 @@
 # neuro_toolbox
 *HEADER FILES* only C++ library for analysis of *neurophysiological* and *simulated* data.
 
-for auto-generated **documentation** you need to have `doxygen` installed on your machine.
+The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is also available. To generate documents you need to have `doxygen` installed on your machine.
 
 ```shell
 # on linux machines use
