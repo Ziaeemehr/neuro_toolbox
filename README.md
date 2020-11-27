@@ -14,5 +14,15 @@ which produce `html` file.
 
 ## installation 
 
-There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using `-I PATH_TO_HEADER_FILES`.
+There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using `-I PATH_TO_HEADER_FILES` and also include the header file 
+
+```c++
+#include "neuro_toolbox.hpp"
+```
+
+and access to the content with `NTB::`  namespace.
+
+
+
+
 
