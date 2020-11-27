@@ -57,7 +57,7 @@ namespace NTB
     {
         /*!
         * Random number distribution that produces integer values according to a uniform discrete distribution, which is described by the following probability mass function:
-        * P(i|a,b) = 1/(b-a+1), a<= i <= b
+        * P(i|a,b) = 1/(b-a+1), a <= i <= b
         * \param low Lower boundary of the output interval. All values generated will be greater than or equal to low.
         * \param high Upper boundary of the output interval. All values generated will be less than or equal to high.
         * \param size Lengh of output random numbers.

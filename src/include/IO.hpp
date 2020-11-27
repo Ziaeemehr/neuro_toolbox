@@ -1,10 +1,3 @@
-/*! 
- * \author Abolfazl Ziaeemehr
- * \version 0.1
- * \date Nov. 2020
- * \mainpage IO for input/output data 
-*/
-
 #ifndef IO_HPP
 #define IO_HPP
 

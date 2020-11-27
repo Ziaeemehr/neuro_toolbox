@@ -5,7 +5,7 @@ for auto-generated **documentation** you need to have `doxygen` installed on you
 
 ```shell
 # on linux machines use
-sudo pat-get install doxygen
+sudo apt-get install doxygen
 cd doc
 doxygen 
 ```
@@ -21,6 +21,17 @@ There is no need for installation. It's a header file only library. You just nee
 ```
 
 and access to the content with `NTB::`  namespace.
+
+### testing 
+
+neuro_toolbox use [catch2](https://github.com/catchorg/Catch2) unittest. To use tests 
+
+```shell
+cd src/tests
+make clean
+make
+./run_all_tests
+```
 
 
 
