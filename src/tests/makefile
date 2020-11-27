@@ -2,11 +2,11 @@
 
 CXX = g++
 DIR = ../include
-CXXFLAGS = -std=c++11 -Wall -I$(DIR)
+CXXFLAGS = -std=c++11 -Wall -lfftw3 -I$(DIR)
 
 # HEADERS = 
 
-all:  random_generators_test.exe IO_test.exe utility_test.exe
+all:  signal_processing_test.exe random_generators_test.exe IO_test.exe utility_test.exe 
 
 
 %.exe: %.o

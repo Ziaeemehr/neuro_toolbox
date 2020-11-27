@@ -33,6 +33,20 @@ make
 ./run_all_tests
 ```
 
+### Dependencies
+
+- fftw3
+
+  ```shell
+  # on ubuntu machines
+  sudo apt-get update -y
+  sudo apt-get install -y fftw3
+  ```
+
+  
+
+
+
 
 
 
