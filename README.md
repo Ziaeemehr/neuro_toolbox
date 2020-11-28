@@ -1,16 +1,7 @@
 # neuro_toolbox
 *HEADER FILES* only C++ library for analysis of *neurophysiological* and *simulated* data.
 
-The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is also available. To generate documents you need to have `doxygen` installed on your machine.
-
-```shell
-# on linux machines use
-sudo apt-get install doxygen
-cd doc
-doxygen 
-```
-
-which produce `html` file. 
+The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is also available. 
 
 ## installation 
 
@@ -48,7 +39,16 @@ make IO
   sudo apt-get install -y fftw3
   ```
 
-  
+To generate documents you need to have `doxygen` installed on your machine.
+
+```shell
+# on linux machines use
+sudo apt-get install doxygen
+cd doc
+doxygen 
+```
+
+which produce `html` file.   
 
 
 

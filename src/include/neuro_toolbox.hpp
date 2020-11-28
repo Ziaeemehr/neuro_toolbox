@@ -5,16 +5,6 @@
  * \copyright GNU Public License
  * \mainpage HEADER FILES only C++ library for analysis of neurophysiological and simulated data. 
  * \section intro_sec Introduction
- * for auto-generated **documentation** you need to have `doxygen` installed on your machine.
-
- * ```shell
- * # on linux machines use
- * sudo apt-get install doxygen
- * cd doc
- * doxygen 
- * ```
- * 
- * which produce `html` file. 
  * 
  * # installation 
  * 
@@ -33,9 +23,24 @@
  * ```shell
  * cd src/tests
  * make clean
- * make
- * ./run_all_tests
+ * make all
+ * 
+ * # or test each header file seperately
+ * make signal_proccesing
+ * make random_generators
+ * make IO 
+ *
  * ```
+ * 
+ * for auto-generated **documentation** you need to have `doxygen` installed on your machine.
+ * ```shell
+ * # on linux machines use
+ * sudo apt-get install doxygen
+ * cd doc
+ * doxygen 
+ * ```
+ * 
+ * which produce `html` file. 
 
 */
 
