@@ -7,6 +7,18 @@ CXXFLAGS = -std=c++11 -Wall -lfftw3 -I$(DIR)
 # HEADERS = 
 
 all:  signal_processing_test.exe random_generators_test.exe IO_test.exe utility_test.exe 
+	./signal_processing_test.exe
+	./random_generators_test.exe
+	./IO_test.exe
+
+signal_processing: signal_processing_test.exe 
+	./signal_processing_test.exe
+
+random_generators: random_generators_test.exe 
+	./random_generators_test.exe
+
+IO: IO_test.exe
+	./IO_test.exe
 
 
 %.exe: %.o

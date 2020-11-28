@@ -1,6 +1,0 @@
-
-make
-./IO_test.exe
-./utility_test.exe
-./random_generators_test.exe
-./signal_processing_test.exe
