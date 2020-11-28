@@ -29,8 +29,13 @@ neuro_toolbox use [catch2](https://github.com/catchorg/Catch2) unittest. To use 
 ```shell
 cd src/tests
 make clean
-make
-./run_all_tests
+
+make all # to run all tests
+
+# or test each header file seperately
+make signal_proccesing
+make random_generators
+make IO
 ```
 
 ### Dependencies
