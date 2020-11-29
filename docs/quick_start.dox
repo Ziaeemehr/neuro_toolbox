@@ -1,0 +1,9 @@
+/*!
+  \page Quick start
+
+  contents
+*/
+
+INPUT = ../src \
+        ../include \
+        ../docs/quick_start.dox

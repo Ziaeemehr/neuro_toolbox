@@ -48,7 +48,7 @@ cd doc
 doxygen 
 ```
 
-which produce `html` file.   
+which produce `html` files.   
 
 
 
