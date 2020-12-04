@@ -1,11 +1,11 @@
 # neuro_toolbox
-*HEADER FILES* only C++ library for analysis of *neurophysiological* and *simulated* data.
+*Single Header File* C++ library for analysis of *neurophysiological* and *simulated* data.
 
 The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is available. 
 
 ## installation 
 
-There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using `-I PATH_TO_HEADER_FILES` and also include the header file 
+There is no need for installation. It's a header file only library. You just need to put the header file "neuro_toolbox.hpp" from *single_header_file* directory in a next to your `cpp` or `cxx`  files and use the library. You also need to include the header file. 
 
 ```c++
 #include "neuro_toolbox.hpp"
@@ -49,6 +49,14 @@ doxygen
 ```
 
 which produce `html` files.   
+
+
+
+I put the latest stable version of the library at *single_header_file* directory. 
+
+The `neuro_toolbox.hpp` file is made by a python script in this directory.
+
+
 
 
 
