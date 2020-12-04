@@ -218,6 +218,33 @@ namespace NTB
     }
     //-------------------------------------------------------------------------
 
-} // namespace Neuro
+    void spikes_to_file(const std::string filename,
+                        const std::vector<std::vector<double>> &spikes)
+    {
+
+        FILE *spkfile;
+        spkfile = fopen(filename.c_str(), "w");
+
+        if (file_exists(filename))
+        {
+            for (size_t i = 0; i < spikes.size(); i++)
+            {
+                for (size_t j = 0; j < spikes[i].size(); j++)
+                {
+                    fprintf(spkfile, "%18.6f", spikes[i][j]);
+                }
+                fprintf(spkfile, "\n");
+            }
+
+            fclose(spkfile);
+        }
+        else
+        {
+            printf("Could not open file properly in spike_to_file!\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+} // namespace NTB
 
 #endif // !IO_HPP

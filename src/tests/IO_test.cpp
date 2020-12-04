@@ -40,5 +40,18 @@ TEST_CASE("write vector to file", " ")
     REQUIRE(A[1] == B[1]);
 }
 
+TEST_CASE("Write spikes to file", " ")
+{
+    // each vector is spikes of a single neuron
+    std::vector<std::vector<double>> spike_times = {
+        {0.2, 0.35, 1.5},
+        {0.1},
+        {},
+        {2.3, 5.1}
+        };
+    NTB::spikes_to_file("data/spikes.txt", spike_times);
+    REQUIRE(1 == 1);
+}
+
 // Compile & run:
 // - g++ -std=c++11 -Wall -I$(CATCH_SINGLE_INCLUDE) -o prog prog.cpp && ./prog --success
