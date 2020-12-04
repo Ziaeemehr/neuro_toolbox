@@ -1,9 +1,7 @@
 #ifndef UTILITY_HPP
 #define UTILITY_HPP
 
-#include <time.h>
-#include <sys/time.h>
-#include <string>
+#include "config.hpp"
 
 namespace NTB
 {

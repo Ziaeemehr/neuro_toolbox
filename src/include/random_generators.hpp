@@ -1,9 +1,7 @@
 #ifndef RANDOM_GENERATORS
 #define RANDOM_GENERATORS
 
-#include <vector>
-#include <random>
-#include <assert.h>
+#include "config.hpp"
 
 namespace NTB
 {

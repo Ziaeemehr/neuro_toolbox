@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['main_2edox',['main.dox',['../main_8dox.html',1,'']]],
-  ['main_2emd',['main.md',['../main_8md.html',1,'']]],
-  ['make_5fsignal',['make_signal',['../namespaceNTB.html#a0cd9207cfb1ba60d651a84d1ea29c2c9',1,'NTB']]],
-  ['main',['main',['../md_doc_main.html',1,'']]]
+  ['load_5fmatrix',['load_matrix',['../namespaceNTB.html#acc9d4ea92b17d1b2b84927ae088d6caa',1,'NTB']]],
+  ['load_5fvector',['load_vector',['../namespaceNTB.html#a0acbed647d4e58d7dfee3fa3e2fac661',1,'NTB']]]
 ];

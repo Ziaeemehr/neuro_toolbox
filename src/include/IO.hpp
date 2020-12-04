@@ -1,13 +1,7 @@
 #ifndef IO_HPP
 #define IO_HPP
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
-#include <sys/stat.h>
-#include <assert.h>
-#include <stdlib.h> /* exit, EXIT_FAILURE */
+#include "config.hpp"
 
 namespace NTB
 {

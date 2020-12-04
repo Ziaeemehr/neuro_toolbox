@@ -1,10 +1,7 @@
 #ifndef SIGNAL_PROCESSING
 #define SIGNAL_PROCESSING
 
-#include <vector>
-#include <cmath>
-#include <fftw3.h>
-#include <assert.h>
+#include "config.hpp"
 
 namespace NTB
 {
