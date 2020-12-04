@@ -5,7 +5,7 @@ The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is avail
 
 ## installation 
 
-There is no need for installation. It's a header file only library. You just need to put the header file "neuro_toolbox.hpp" from *single_header_file* directory in a next to your `cpp` or `cxx`  files and use the library. You also need to include the header file. 
+There is no need for installation. It's a header file only library. You just need to put the header file "neuro_toolbox.hpp" from *single_header_file* directory next to your `cpp` or `cxx`  files and use the library. You also need to include the header file. 
 
 ```c++
 #include "neuro_toolbox.hpp"
