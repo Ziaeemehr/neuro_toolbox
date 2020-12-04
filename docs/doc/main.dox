@@ -7,40 +7,55 @@
  * \section intall Installation
  * 
  * 
- * There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using `-I PATH_TO_HEADER_FILES` and also include the header file 
- * 
+
+ There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using `-I PATH_TO_HEADER_FILES` and also include the header file 
+ 
  * ```c++
  * #include "neuro_toolbox.hpp"
  * ```
- * 
- * and access to the content with `NTB::`  namespace.
- * 
- * \section testing Testing 
- * 
- * neuro_toolbox use [catch2](https://github.com/catchorg/Catch2) unittest. To use tests 
- * 
+  
+ and access to the content with `NTB::`  namespace.
+ 
+ \section testing Testing 
+  
+ neuro_toolbox use [catch2](https://github.com/catchorg/Catch2) unittest. To use tests 
+  
  * ```shell
  * cd src/tests
  * make clean
  * make all
- * 
+  
  * # or test each header file seperately
  * make signal_proccesing
  * make random_generators
  * make IO 
  *
  * ```
- * 
- * for auto-generated **documentation** you need to have `doxygen` installed on your machine.
+  
+ for auto-generated **documentation** you need to have `doxygen` installed on your machine.
+ 
  * ```shell
  * # on linux machines use
  * sudo apt-get install doxygen
  * cd doc
  * doxygen 
  * ```
- * 
- * which produce `html` files. 
- *
- * \section quick_start Quick start
- *
+ 
+ which produce `html` files. 
+ 
+ \section quick_start Quick start
+  
+ \subsection IO input/output
+neuro_toolbox use Function templates i.e. you can call the functions with different type of data
+
+for exampel to read a colum from file you can use:
+
+std::vector<int> vec = NTB::load_vector<int>("filename_with_int_numbers.txt");
+ 
+std::vector<float> vec = NTB::load_vector<float>("filename_with_float_numbers.txt");
+ 
+std::vector<double> vec = NTB::load_vector<double>("filename_with_double_numbers.txt");
+ 
+\subsection signal_proccesing Signal Processing
+ 
  */

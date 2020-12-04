@@ -69,13 +69,23 @@ $(function() {
 <h1><a class="anchor" id="intall"></a>
 Installation</h1>
 <p>There is no need for installation. It's a header file only library. You just need to put the header files in a directory and pass the address of the directory to the make file or directly pass it to the terminal using <code>-I PATH_TO_HEADER_FILES</code> and also include the header file</p>
-<div class="fragment"><div class="line">{c++}</div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="neuro__toolbox_8hpp.html">neuro_toolbox.hpp</a>&quot;</span></div></div><!-- fragment --><p>and access to the content with <code><a class="el" href="namespaceNTB.html">NTB</a>::</code> namespace.</p>
+<div class="fragment"><div class="line">{c++}</div><div class="line"><span class="preprocessor">   #include &quot;<a class="code" href="neuro__toolbox_8hpp.html">neuro_toolbox.hpp</a>&quot;</span></div></div><!-- fragment --><p>and access to the content with <code><a class="el" href="namespaceNTB.html">NTB</a>::</code> namespace.</p>
 <h1><a class="anchor" id="testing"></a>
 Testing</h1>
 <p>neuro_toolbox use <a href="https://github.com/catchorg/Catch2">catch2</a> unittest. To use tests</p>
-<div class="fragment"><div class="line">cd src/tests</div><div class="line">make clean</div><div class="line">make all</div><div class="line"></div><div class="line"># or test each header file seperately</div><div class="line">make signal_proccesing</div><div class="line">make random_generators</div><div class="line">make IO </div></div><!-- fragment --><p>for auto-generated <b>documentation</b> you need to have <code>doxygen</code> installed on your machine. </p><div class="fragment"><div class="line"># on linux machines use</div><div class="line">sudo apt-get install doxygen</div><div class="line">cd doc</div><div class="line">doxygen </div></div><!-- fragment --><p>which produce <code>html</code> files.</p>
+<div class="fragment"><div class="line">cd src/tests</div><div class="line">make clean</div><div class="line">make all</div><div class="line"></div><div class="line"># or test each header file seperately</div><div class="line">make signal_proccesing</div><div class="line">make random_generators</div><div class="line">make IO </div></div><!-- fragment --><p>for auto-generated <b>documentation</b> you need to have <code>doxygen</code> installed on your machine.</p>
+<div class="fragment"><div class="line"># on linux machines use</div><div class="line">sudo apt-get install doxygen</div><div class="line">cd doc</div><div class="line">doxygen </div></div><!-- fragment --><p>which produce <code>html</code> files.</p>
 <h1><a class="anchor" id="quick_start"></a>
 Quick start</h1>
+<h2><a class="anchor" id="IO"></a>
+input/output</h2>
+<p>neuro_toolbox use Function templates i.e. you can call the functions with different type of data</p>
+<p>for exampel to read a colum from file you can use:</p>
+<p>std::vector&lt;int&gt; vec = <a class="el" href="namespaceNTB.html#a0acbed647d4e58d7dfee3fa3e2fac661">NTB::load_vector&lt;int&gt;</a>("filename_with_int_numbers.txt");</p>
+<p>std::vector&lt;float&gt; vec = <a class="el" href="namespaceNTB.html#a0acbed647d4e58d7dfee3fa3e2fac661">NTB::load_vector&lt;float&gt;</a>("filename_with_float_numbers.txt");</p>
+<p>std::vector&lt;double&gt; vec = <a class="el" href="namespaceNTB.html#a0acbed647d4e58d7dfee3fa3e2fac661">NTB::load_vector&lt;double&gt;</a>("filename_with_double_numbers.txt");</p>
+<h2><a class="anchor" id="signal_proccesing"></a>
+Signal Processing</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
