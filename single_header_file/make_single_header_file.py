@@ -25,14 +25,14 @@ def get_headerfile_names():
     return names
 
 
-def copy_to_file(input_name, output_file, skip_header=2, skip_footer=1):
+def copy_to_file(input_name, output_file, skip_header=2, skip_footer=1, skip_include=True):
 
     output_file.write("// from {:s}\n// {:s}".format(input_name, "-" * 76))
     with open(join(data_path, input_name)) as f:
         lines = f.readlines()
         n_lines = len(lines)
         for i in range(skip_header, n_lines-skip_footer):
-            if "#include" in lines[i]:
+            if skip_include and ("#include" in lines[i]):
                 continue
             output_file.write(lines[i])
 
@@ -49,10 +49,21 @@ if __name__ == "__main__":
     output_file_name = "neuro_toolbox.hpp"
     output_file = open(output_file_name, "w")
     output_file.write("#ifndef NEURO_TOOLBOX\n")
-    output_file.write("#define NEURO_TOOLBOX\n\n\n")
+    output_file.write("#define NEURO_TOOLBOX\n")
+    output_file.write(" \n")
 
     for name in headers:
-        copy_to_file(name, output_file, skip_header=2, skip_footer=1)
+        if name == "config.hpp":
+            copy_to_file(name,
+                         output_file,
+                         skip_header=2,
+                         skip_footer=1,
+                         skip_include=False)
+        else:
+            copy_to_file(name,
+                         output_file,
+                         skip_header=2,
+                         skip_footer=1)
 
     output_file.write("\n#endif // !NEURO_TOOLBOX\n")
     output_file.close()

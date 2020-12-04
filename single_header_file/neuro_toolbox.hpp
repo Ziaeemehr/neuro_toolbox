@@ -1,9 +1,21 @@
 #ifndef NEURO_TOOLBOX
 #define NEURO_TOOLBOX
-
-
+ 
 // from config.hpp
 // ----------------------------------------------------------------------------
+
+#include <cmath>
+#include <time.h>
+#include <vector>
+#include <random>
+#include <string>
+#include <fftw3.h>
+#include <fstream>
+#include <iostream>
+#include <assert.h>
+#include <stdlib.h> /* exit, EXIT_FAILURE */
+#include <sys/stat.h>
+#include <sys/time.h>
 
 
 
