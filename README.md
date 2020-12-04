@@ -1,7 +1,7 @@
 # neuro_toolbox
 *HEADER FILES* only C++ library for analysis of *neurophysiological* and *simulated* data.
 
-The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is also available. 
+The online [documentation](https://ziaeemehr.github.io/neuro_toolbox/)  is available. 
 
 ## installation 
 
