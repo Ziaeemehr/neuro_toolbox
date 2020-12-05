@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_5fsignal',['make_signal',['../namespaceNTB.html#a0cd9207cfb1ba60d651a84d1ea29c2c9',1,'NTB']]]
+  ['hilbert_5ftransform',['hilbert_transform',['../namespaceNTB.html#a0a2cf5d49516ed525a27f99d1ea54e24',1,'NTB']]]
 ];

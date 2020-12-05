@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['display_5ftiming',['display_timing',['../namespaceNTB.html#a055a14a59a970a9e0ca7cb816c17e4ec',1,'NTB']]]
+  ['calculate_5fphase_5fdifference',['calculate_phase_difference',['../namespaceNTB.html#a93ba377e586dd2a3e5570b45e85f17af',1,'NTB']]],
+  ['calculate_5fphase_5fsynchrony',['calculate_phase_synchrony',['../namespaceNTB.html#a6075bf20240e0311a24958df9804134a',1,'NTB']]]
 ];

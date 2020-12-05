@@ -84,6 +84,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a5cd4d592eea34940f0d6826aabdbd1b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a5cd4d592eea34940f0d6826aabdbd1b3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a5cd4d592eea34940f0d6826aabdbd1b3">write_vector_to_file</a> (const std::vector&lt; T &gt; &amp;v, const std::string filename)</td></tr>
 <tr class="separator:a5cd4d592eea34940f0d6826aabdbd1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afada886ccb301d0a3110225df85065b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#afada886ccb301d0a3110225df85065b8">spikes_to_file</a> (const std::string filename, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;spikes)</td></tr>
+<tr class="separator:afada886ccb301d0a3110225df85065b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dd44fc79e0264c1dc4c11bf1551cf53"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a5dd44fc79e0264c1dc4c11bf1551cf53">rand_uniform</a> (const double low, const double high, const int size, const int seed=-1)</td></tr>
 <tr class="separator:a5dd44fc79e0264c1dc4c11bf1551cf53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4593cb50396b67eec8525acd5f1da6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a9d4593cb50396b67eec8525acd5f1da6">randint</a> (const int low, const int high, const int size, const int seed=-1)</td></tr>
@@ -92,6 +94,22 @@ Functions</h2></td></tr>
 <tr class="separator:a0cd9207cfb1ba60d651a84d1ea29c2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03800aeb3187e5f2db3787c9519ed2b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a03800aeb3187e5f2db3787c9519ed2b9">fft</a> (const std::vector&lt; double &gt; &amp;signal, std::vector&lt; double &gt; &amp;frequencies, std::vector&lt; double &gt; &amp;amplitudes, const double fs)</td></tr>
 <tr class="separator:a03800aeb3187e5f2db3787c9519ed2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34404a51ab9db0221d887ce5c1c0b90"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad34404a51ab9db0221d887ce5c1c0b90"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#ad34404a51ab9db0221d887ce5c1c0b90">flatten</a> (const std::vector&lt; std::vector&lt; T &gt;&gt; &amp;vec)</td></tr>
+<tr class="separator:ad34404a51ab9db0221d887ce5c1c0b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c978cae087e2b9df4dc0f2727edfd8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a12c978cae087e2b9df4dc0f2727edfd8">angle_arr</a> (const fftw_complex *z, const int n, bool deg=false)</td></tr>
+<tr class="separator:a12c978cae087e2b9df4dc0f2727edfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c762289966bed189ab98103d97ae43"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a43c762289966bed189ab98103d97ae43"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a43c762289966bed189ab98103d97ae43">average</a> (const std::vector&lt; T &gt; &amp;vec, const int index=0)</td></tr>
+<tr class="separator:a43c762289966bed189ab98103d97ae43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2cf5d49516ed525a27f99d1ea54e24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a0a2cf5d49516ed525a27f99d1ea54e24">hilbert_transform</a> (const std::vector&lt; double &gt; &amp;in_vec, fftw_complex *out_array)</td></tr>
+<tr class="separator:a0a2cf5d49516ed525a27f99d1ea54e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83017ecd82b7c2800be4439d01188f7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#aa83017ecd82b7c2800be4439d01188f7">unwrap</a> (const std::vector&lt; double &gt; &amp;in_vec)</td></tr>
+<tr class="separator:aa83017ecd82b7c2800be4439d01188f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ba377e586dd2a3e5570b45e85f17af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a93ba377e586dd2a3e5570b45e85f17af">calculate_phase_difference</a> (const std::vector&lt; double &gt; &amp;x)</td></tr>
+<tr class="separator:a93ba377e586dd2a3e5570b45e85f17af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6075bf20240e0311a24958df9804134a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a6075bf20240e0311a24958df9804134a">calculate_phase_synchrony</a> (const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;voltages)</td></tr>
+<tr class="separator:a6075bf20240e0311a24958df9804134a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9904ea7da8d524d5c305756f14a0de39"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a9904ea7da8d524d5c305756f14a0de39">get_wall_time</a> ()</td></tr>
 <tr class="separator:a9904ea7da8d524d5c305756f14a0de39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20c971ff620a16e6aa7314a1ca657ca0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceNTB.html#a20c971ff620a16e6aa7314a1ca657ca0">get_cpu_time</a> ()</td></tr>
@@ -143,6 +161,124 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>adjacency list as a vector of vector</dd></dl>
 <p><b>example</b> adjmat_to_adjlist&lt;int&gt;(A);</p>
+
+</div>
+</div>
+<a id="a12c978cae087e2b9df4dc0f2727edfd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c978cae087e2b9df4dc0f2727edfd8">&#9670;&nbsp;</a></span>angle_arr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; NTB::angle_arr </td>
+          <td>(</td>
+          <td class="paramtype">const fftw_complex *&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>deg</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the angle of the complex argument.</p>
+
+</div>
+</div>
+<a id="a43c762289966bed189ab98103d97ae43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c762289966bed189ab98103d97ae43">&#9670;&nbsp;</a></span>average()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTB::average </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>average the vector from element "index" to end of the vector</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>input vector </td></tr>
+    <tr><td class="paramname">index</td><td>index to drop elements before that </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>[double] average value of input vector</dd></dl>
+
+</div>
+</div>
+<a id="a93ba377e586dd2a3e5570b45e85f17af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ba377e586dd2a3e5570b45e85f17af">&#9670;&nbsp;</a></span>calculate_phase_difference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTB::calculate_phase_difference </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6075bf20240e0311a24958df9804134a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6075bf20240e0311a24958df9804134a">&#9670;&nbsp;</a></span>calculate_phase_synchrony()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double NTB::calculate_phase_synchrony </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>voltages</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -259,6 +395,33 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ad34404a51ab9db0221d887ce5c1c0b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad34404a51ab9db0221d887ce5c1c0b90">&#9670;&nbsp;</a></span>flatten()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;T&gt; NTB::flatten </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return a copy of the vector collapsed into one dimension </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>input vector of vectors </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the input vector, flattened to one dimension.</dd></dl>
+
+</div>
+</div>
 <a id="a20c971ff620a16e6aa7314a1ca657ca0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20c971ff620a16e6aa7314a1ca657ca0">&#9670;&nbsp;</a></span>get_cpu_time()</h2>
 
@@ -292,6 +455,42 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>measure real passed time </p><dl class="section return"><dt>Returns</dt><dd>wall time in second</dd></dl>
+
+</div>
+</div>
+<a id="a0a2cf5d49516ed525a27f99d1ea54e24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2cf5d49516ed525a27f99d1ea54e24">&#9670;&nbsp;</a></span>hilbert_transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTB::hilbert_transform </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_vec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">fftw_complex *&#160;</td>
+          <td class="paramname"><em>out_array</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compute the analytic signal, using the Hilbert transform. equivalent to scipy.signal.hilbert</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>vector </td></tr>
+    <tr><td class="paramname">out_array</td><td>complex analytic signal</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -555,6 +754,60 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afada886ccb301d0a3110225df85065b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afada886ccb301d0a3110225df85065b8">&#9670;&nbsp;</a></span>spikes_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NTB::spikes_to_file </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>spikes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa83017ecd82b7c2800be4439d01188f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83017ecd82b7c2800be4439d01188f7">&#9670;&nbsp;</a></span>unwrap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; NTB::unwrap </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unwrap by changing deltas between values to 2*pi complement.</p>
+<p>Unwrap radian phase in_vec by changing absolute jumps greater than pi to their 2*pi complement. equivalent to numpy.unwrap </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_vec</td><td>input vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>out_vec output vector</dd></dl>
 
 </div>
 </div>

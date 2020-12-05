@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rand_5funiform',['rand_uniform',['../namespaceNTB.html#a5dd44fc79e0264c1dc4c11bf1551cf53',1,'NTB']]],
-  ['randint',['randint',['../namespaceNTB.html#a9d4593cb50396b67eec8525acd5f1da6',1,'NTB']]]
+  ['load_5fmatrix',['load_matrix',['../namespaceNTB.html#acc9d4ea92b17d1b2b84927ae088d6caa',1,'NTB']]],
+  ['load_5fvector',['load_vector',['../namespaceNTB.html#a0acbed647d4e58d7dfee3fa3e2fac661',1,'NTB']]]
 ];

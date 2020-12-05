@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['write_5fmatrix_5fto_5ffile',['write_matrix_to_file',['../namespaceNTB.html#aca3d5bd68a4b71cbe9ef891c627be527',1,'NTB']]],
-  ['write_5fvector_5fto_5ffile',['write_vector_to_file',['../namespaceNTB.html#a5cd4d592eea34940f0d6826aabdbd1b3',1,'NTB']]]
+  ['make_5fsignal',['make_signal',['../namespaceNTB.html#a0cd9207cfb1ba60d651a84d1ea29c2c9',1,'NTB']]]
 ];

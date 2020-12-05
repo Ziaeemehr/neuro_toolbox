@@ -50,12 +50,12 @@ neuro_toolbox use Function templates i.e. you can call the functions with differ
 
 for exampel to read a colum from file you can use:
 
-std::vector<int> vec = NTB::load_vector<int>("filename_with_int_numbers.txt");
- 
-std::vector<float> vec = NTB::load_vector<float>("filename_with_float_numbers.txt");
- 
-std::vector<double> vec = NTB::load_vector<double>("filename_with_double_numbers.txt");
- 
+* ```c++
+* std::vector<int> vec = NTB::load_vector<int>("file_with_int_numbers.txt");
+* std::vector<float> vec = NTB::load_vector<float>("file_with_float_numbers.txt");
+* std::vector<double> vec = NTB::load_vector<double>("file_with_double_numbers.txt");
+* ```
+
 \subsection signal_proccesing Signal Processing
 
 The following example make a test signal with mixture of two frequencies and different amplitudes.
