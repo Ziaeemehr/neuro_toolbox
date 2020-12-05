@@ -50,11 +50,13 @@ neuro_toolbox use Function templates i.e. you can call the functions with differ
 
 for exampel to read a colum from file you can use:
 
+```c++
 std::vector<int> vec = NTB::load_vector<int>("filename_with_int_numbers.txt");
  
 std::vector<float> vec = NTB::load_vector<float>("filename_with_float_numbers.txt");
  
 std::vector<double> vec = NTB::load_vector<double>("filename_with_double_numbers.txt");
+```
  
 \subsection signal_proccesing Signal Processing
 
